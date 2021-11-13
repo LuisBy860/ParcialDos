@@ -1,0 +1,18 @@
+﻿@model ParcialDos.Models.Courses
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registrar</h2>
+
+@using (Html.BeginForm("Registrar", "Curso", FormMethod.Post))
+{
+    <label>TITULO</label>
+    @Html.TextBoxFor(a => a.Title)
+    <br />
+    <label>CREDITOS</label>
+    @Html.TextBoxFor(a => a.Credits)
+    <input type="submit" />
+    <br />
+}
